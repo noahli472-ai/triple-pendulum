@@ -317,13 +317,3 @@ Run them with `pytest`.
 | `rtol` / `atol` | Allowed relative / absolute error per solver step |
 | Chaos | Tiny changes in the start lead to very different outcomes later |
 | Energy conservation | Without friction, `T + V` stays constant – used to check the simulation |
-
----
-
-## 11. Interview cheat sheet (30 seconds)
-
-> "I simulate an n-link pendulum. The equations of motion come from the Euler-Lagrange formalism and have the form
-> mass matrix times angular accelerations equals a right-hand side with centrifugal terms and gravity. I solve this
-> linear system in every step and integrate with an adaptive Runge-Kutta solver. Since the system is chaotic, I
-> validate it with energy conservation and against analytic results like the small-angle period. On top there is a
-> real-time animation and a GUI. The project is a Python port of a MATLAB project from my Bachelor's."

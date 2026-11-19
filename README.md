@@ -53,6 +53,8 @@ pip install -r requirements.txt
 
 tkinter ships with the official Python installers for Windows and macOS. On Linux you may need `sudo apt install python3-tk`.
 
+Step-by-step guide for VS Code on Windows, including fixes for common errors: [`docs/RUNNING_IN_VSCODE.md`](docs/RUNNING_IN_VSCODE.md).
+
 ## Usage
 
 **GUI**

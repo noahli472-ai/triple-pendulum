@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "multipendulum"
+version = "1.0.0"
+description = "Simulation and animation of an n-link (e.g. triple) pendulum using Lagrangian mechanics"
+readme = "README.md"
+license = {text = "BSD-2-Clause AND MIT"}
+authors = [{name = "Noah Lindner"}]
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "scipy>=1.10", "matplotlib>=3.7"]
+
+[project.optional-dependencies]
+dev = ["pytest", "pillow", "ruff"]
+
+[project.scripts]
+multipendulum = "multipendulum.gui:main"
+
+[tool.setuptools]
+packages = ["multipendulum"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+# pycodestyle, pyflakes, isort, bugbear, pyupgrade, docstrings (public API), type hints
+select = ["E", "F", "W", "I", "B", "UP", "D1", "ANN001", "ANN002", "ANN003", "ANN201", "ANN204",
+          "ANN205", "ANN206"]
+# D105/D107: magic methods and __init__ are documented in the class docstring.
+# E741: single-letter physics symbols such as `l` (length) are intentional.
+ignore = ["D105", "D107", "E741"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["D", "ANN"]
+"examples/*" = ["D", "ANN"]
+"scripts/*" = ["D", "ANN"]

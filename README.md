@@ -110,7 +110,9 @@ triple-pendulum/
 │   ├── gui.py           # tkinter GUI                                   (multipendgui.m)
 │   ├── presets.py       # random parameter configurations (GUI-independent)
 │   └── __main__.py      # python -m multipendulum
-├── docs/CODE_WALKTHROUGH.md   # step-by-step explanation of physics and code
+├── docs/
+│   ├── CODE_WALKTHROUGH.md    # step-by-step explanation of physics and code
+│   └── RUNNING_IN_VSCODE.md   # setup and run guide for VS Code on Windows
 ├── examples/triple_pendulum.py
 ├── tests/test_dynamics.py
 ├── assets/              # GIF and screenshot for this README
